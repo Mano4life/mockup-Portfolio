@@ -1,0 +1,637 @@
+/* ============================= fonts ============================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
+
+/*============================= utility =============================  */
+:root {
+  --main: #151515;
+  --secondary: #242424;
+  --accent: #4ee1a0;
+  --mainTxt: #ffffff;
+  --smallTxt: #d9d9d9;
+  --error: #ff6f5b;
+}
+
+.hide {
+  display: none;
+}
+
+.transparent {
+  background-color: unset;
+  border: none;
+}
+
+.error {
+  color: var(--error) !important;
+  border-bottom: 2px solid var(--error) !important;
+}
+
+/*============================= universal ============================= */
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.rings,
+.rings2,
+.rings3,
+.circle {
+  display: initial;
+}
+
+/* ============================= general style ============================= */
+
+body {
+  width: 100%;
+  margin: 0;
+  background-color: var(--main);
+  color: var(--smallTxt);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.wrapper {
+  width: 58%;
+  margin-inline: auto;
+  position: relative;
+}
+
+a {
+  all: unset;
+}
+
+.btn {
+  color: var(--mainTxt);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  background-color: none;
+  border-bottom: 2px solid var(--accent);
+  border-radius: 0;
+  transition: 0.1s ease-in-out;
+}
+
+.btn:hover {
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 25px;
+}
+
+.btn:active {
+  transform: scale(0.9);
+  border: 2px solid var(--accent) !important;
+  border-radius: 25px;
+}
+
+/* =============================== header ============================= */
+
+.header {
+  max-width: inherit;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  color: var(--mainTxt);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.0229007633587786rem + 2.035623409669211vw, 2rem);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.title:hover {
+  color: var(--accent);
+}
+
+.icons {
+  flex-direction: row-reverse;
+  font-size: 1.7rem;
+  z-index: 10;
+}
+
+i {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+i:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+/* =============================== hero ========================== */
+.hero {
+  max-width: inherit;
+  margin-top: 8rem;
+  padding-bottom: 15rem;
+  border-bottom: 2px solid var(--mainTxt);
+}
+
+.heroText {
+  width: 70%;
+}
+
+.hero h1 {
+  font-size: 88px;
+  letter-spacing: -2.5px;
+  line-height: 88px;
+  font-weight: 700;
+  color: var(--mainTxt);
+}
+
+.hero h1 span {
+  display: inline;
+  border-bottom: 5px solid var(--accent);
+}
+
+.hero p {
+  margin-top: 3rem;
+  width: 55%;
+}
+
+.heroBtn {
+  margin-top: 5rem;
+}
+
+.me {
+  width: 445px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+  filter: grayscale(1) brightness(50%);
+}
+
+.rings {
+  position: absolute;
+  top: 10rem;
+  left: -20rem;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  right: 24rem;
+  top: 32rem;
+}
+
+/* ====================== SKILLS ========================== */
+
+.skills {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  color: var(--mainTxt);
+  margin-top: 5rem;
+}
+
+.skills .row .experience {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--smallTxt);
+  margin-top: 1.5rem;
+  letter-spacing: normal;
+}
+
+.skills .rings2 {
+  position: absolute;
+  top: 69rem;
+  right: -25rem;
+}
+
+/* ====================== PROJECTS ========================== */
+
+.projectsContainer {
+  margin-top: 10rem;
+  border-bottom: 2px solid var(--mainTxt);
+}
+
+.projectHeader {
+  font-size: 88px;
+  letter-spacing: -2.5px;
+  color: var(--mainTxt);
+}
+
+.card {
+  margin-top: 5rem;
+  width: 100% !important;
+  color: var(--mainTxt);
+  background-color: unset !important;
+  border: none !important;
+  border-radius: initial !important;
+  text-transform: uppercase;
+}
+
+.card-body {
+  padding-left: 0;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-text {
+  color: var(--smallTxt);
+  display: flex;
+  gap: 1rem;
+}
+/* ====================== CONTACT ========================== */
+.contactContainer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 2px solid var(--mainTxt);
+}
+
+.contactHeader {
+  font-size: 88px;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  color: var(--mainTxt);
+}
+
+.contactText {
+  margin-top: 2rem;
+  padding-right: 5rem;
+  color: var(--smallTxt);
+}
+
+form input {
+  background-color: transparent;
+  border: none;
+  color: var(--mainTxt);
+  padding: 1rem;
+  border-bottom: 1px solid var(--mainTxt);
+  margin-top: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+form input:hover,
+form input:active {
+  border-bottom: 1px solid var(--accent);
+}
+
+form #message {
+  padding-bottom: 4rem;
+}
+
+form .btnContact {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.rings3 {
+  position: absolute;
+  bottom: 14rem;
+  left: -20rem;
+}
+
+/* ====================== FOOTER ========================== */
+.footer {
+  max-width: inherit;
+  padding: 3rem 2rem 5rem 0;
+  color: var(--mainTxt);
+}
+
+/* ============ MEDIA QUERY ================= */
+
+@media (max-width: 1700px) {
+  .wrapper {
+    width: 66%;
+  }
+  .heroText {
+    width: 70%;
+  }
+  .hero h1 {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 1571px) {
+  .wrapper {
+    width: 70%;
+  }
+  .heroText {
+    width: 65%;
+  }
+  .hero h1 {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 1202px) {
+  .wrapper {
+    width: 70%;
+  }
+  .heroText {
+    width: 65%;
+  }
+  .hero h1 {
+    font-size: 4em;
+  }
+  .heroBtn {
+    margin-top: 1em;
+  }
+  .circle {
+    right: -4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 3rem;
+    overflow: hidden;
+  }
+  .hero {
+    padding-bottom: 8rem;
+  }
+  .hero h1 {
+    font-size: 3.8em;
+  }
+  .heroBtn {
+    margin-top: 9rem;
+  }
+}
+@media (max-width: 780px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 3rem;
+  }
+  .header {
+    padding-top: 1em;
+  }
+  .hero {
+    padding-bottom: 8rem;
+  }
+  .hero h1 {
+    font-size: 3em;
+  }
+  .heroBtn {
+    margin-top: 9rem;
+  }
+}
+
+@media (max-width: 625px) {
+  /* ====================== wrapper ====================== */
+  body {
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  /* ====================== header ====================== */
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .header nav {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  /* ====================== hero ====================== */
+  .heroText {
+    width: 100%;
+    padding: 0;
+    margin-top: 21rem;
+    letter-spacing: normal;
+    line-height: normal;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  .hero p {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .me {
+    width: 15rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+  }
+
+  .heroBtn {
+    margin-top: 1rem;
+  }
+  .rings {
+    z-index: -2;
+  }
+  .circle {
+    top: 19rem;
+  }
+  /* ====================== skills ====================== */
+  .skills {
+    text-align: center;
+    border-bottom: 2px solid var(--mainTxt);
+    padding-bottom: 4rem;
+  }
+  .skills .row {
+    margin: 0 !important;
+  }
+
+  .skills .row .skillsTitle {
+    margin-top: 2rem;
+  }
+
+  .skills .row .experience {
+    margin-top: 0.1rem;
+  }
+
+  /* ====================== projects ====================== */
+  .projectsContainer {
+    margin-top: 0;
+    padding: 4rem 0;
+    text-align: initial;
+    border-bottom: 2px solid var(--mainTxt);
+  }
+  .firstRow {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .projectHeader {
+    font-size: 2.3em;
+  }
+
+  /* ====================== contact ====================== */
+  .contactContainer {
+    text-align: center;
+  }
+  .contactHeader {
+    font-size: 2.6rem;
+    letter-spacing: initial;
+  }
+  .contactText {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  /* ====================== footer ====================== */
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+  }
+  .footer nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  /* ====================== wrapper ====================== */
+  body {
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  /* ====================== header ====================== */
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .header nav {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  /* ====================== hero ====================== */
+  .heroText {
+    width: 100%;
+    padding: 0;
+    margin-top: 21rem;
+    letter-spacing: normal;
+    line-height: normal;
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  .hero p {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .hero .adam {
+    display: none;
+  }
+
+  .me {
+    width: 13rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+  }
+
+  .heroBtn {
+    margin-top: 1rem;
+  }
+  .rings {
+    z-index: -2;
+  }
+  .circle {
+    top: 19rem;
+  }
+  /* ====================== skills ====================== */
+  .skills {
+    text-align: center;
+    border-bottom: 2px solid var(--mainTxt);
+    padding-bottom: 4rem;
+  }
+  .skills .row {
+    margin: 0 !important;
+  }
+
+  .skills .row .skillsTitle {
+    margin-top: 2rem;
+  }
+
+  .skills .row .experience {
+    margin-top: 0.1rem;
+  }
+
+  /* ====================== projects ====================== */
+  .projectsContainer {
+    margin-top: 0;
+    padding: 4rem 0;
+    text-align: initial;
+    border-bottom: 2px solid var(--mainTxt);
+  }
+  .firstRow {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .projectHeader {
+    font-size: 2.3em;
+  }
+
+  /* ====================== contact ====================== */
+  .contactContainer {
+    text-align: center;
+  }
+  .contactHeader {
+    font-size: 2.6rem;
+    letter-spacing: initial;
+  }
+  .contactText {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  /* ====================== footer ====================== */
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+  }
+  .footer nav {
+    flex-direction: column;
+  }
+}
